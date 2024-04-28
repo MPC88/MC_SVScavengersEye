@@ -27,7 +27,7 @@ namespace MC_SVScavengersEye
             if (effects == null)
                 return;
 
-            effects.localScale *= PChar.Char.explorer / 10;
+            effects.localScale *= 1 + (PChar.Char.explorer / 10);
         }
     }
 }
