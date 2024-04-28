@@ -9,7 +9,7 @@ namespace MC_SVScavengersEye
     {
         public const string pluginGuid = "mc.starvalor.scavengerseye";
         public const string pluginName = "SV Scavenger's Eye";
-        public const string pluginVersion = "1.0.0";
+        public const string pluginVersion = "1.0.1";
 
         public void Awake()
         {
@@ -27,7 +27,14 @@ namespace MC_SVScavengersEye
             if (effects == null)
                 return;
 
-            effects.localScale *= 1 + (PChar.Char.explorer / 10);
+            float scale = (PChar.Char.explorer / 10);
+                        
+            if(scale > 3 && PlayerControl.inst.GetSpaceShip.shipClass < 2)
+                scale = 3;
+            if(scale > 4 && PlayerControl.inst.GetSpaceShip.shipClass < 5)
+                scale = 4;
+
+            effects.localScale *= 1 + scale;
         }
     }
 }
