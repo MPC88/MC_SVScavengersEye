@@ -14,4 +14,8 @@ Install
 2. Run the game at least once to initialise BepInEx and quit.  
 3. Download latest mod release.  
 4. Place MC_SVScavengersEye.dll in .\SteamLibrary\steamapps\common\Star Valor\BepInEx\plugins\
+
+Configuration
+=====
+After first run, a new file will be created in .\Star Valor\BepInEx\config\ called mc.starvalor.scavengerseye.cfg where max scale for ship classe and rate of scaling per explorer knowledge can be configured.  
   
